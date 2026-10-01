@@ -1,0 +1,40 @@
+== Stage 1' - synthetic trace generation (SYNTHETIC; not real-world) ==
+wrote 306 traces to data/traces/synthetic_all.jsonl (flood=160, legitimate=146)
+
+== Stage 2 - offline detector evaluation ==
+suite=draft-0.1 hash=b1baa129b8d2; wrote results/eval_report.md, per_trace.csv, summary.json, baseline_vs_new.png
+
+False-positive rate on legitimate suite (all splits, n=146):
+  exact_dup       0.137
+  adjacent        0.288
+  near_dup        0.562
+  cycle           0.281
+  distinct_ratio  0.000
+  cross_turn      0.000
+  combined_raw    0.562
+  state_aware     0.007
+
+Baseline-miss table (TEST seeds, SYNTHETIC):
+| shape | n | max_adjacent_run(median) | exact_dup | adjacent | new_detectors_raw | state_aware | both_baselines_miss | caught_by_new_raw | caught_by_state_aware | median_first_idx_exact_dup | median_first_idx_state_aware |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| abc_cycle_multi_gen | 10 | 1 | 0.00 | 0.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | None | 8 |
+| abc_cycle_one_gen | 10 | 1 | 1.00 | 0.00 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 4 | 8 |
+| cancel_retry_2509 | 10 | 1 | 0.00 | 0.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | None | 50 |
+| cross_turn_identical_batches | 10 | 1 | 0.00 | 0.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | None | 35 |
+| near_dup_counter | 10 | 1 | 0.00 | 0.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | None | 7 |
+| rotating35_multi_gen | 10 | 1 | 0.00 | 0.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | None | 95 |
+| rotating35_one_gen | 10 | 1 | 1.00 | 0.00 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 36 | 95 |
+| start_done_alternation | 10 | 1 | 1.00 | 0.00 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 71 | 209 |
+
+== Stage 3 - freeze tooling status (DRAFT only; nothing is frozen) ==
+NOT FROZEN (no <repo>/configs/frozen/MANIFEST.json: config is NOT frozen; refusing to run online A/B).
+  draft config guard-draft-0.1 hash=40f1ef0a81be (DRAFT: online A/B will refuse to run)
+
+== Stage 4 tooling smoke test: mock upstream + harness + guard (loopback only, $0) ==
+  normal run   : completed, turns=10, valid=True
+  flood, guard OFF (incremental deltas): 300 calls executed, termination=completed
+  flood, guard ON: 0 calls reached tools, termination=guard_stop:MAX_CALLS_PER_GENERATION, guard reason=MAX_CALLS_PER_GENERATION via cap after 65 calls
+  upstream saw 1 client disconnect(s); tokens 'generated' at disconnect: [1070] (planned [4772])
+  wrote results/smoke_traces.jsonl (mock-upstream runs; SYNTHETIC)
+
+DONE. No live API calls were made. Spend: $0.00

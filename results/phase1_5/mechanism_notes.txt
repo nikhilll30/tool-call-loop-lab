@@ -1,0 +1,45 @@
+ho-F1-1000 label=flood n=51 loop_start=1 raw_fired={}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (None, 51, 51) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=False first=None suppressed={'near_dup': 0, 'cycle': 0, 'distinct_ratio': 0, 'cross_turn': 0}
+ho-F2-1000 label=flood n=70 loop_start=1 raw_fired={}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (None, 70, 70) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=False first=None suppressed={'near_dup': 0, 'cycle': 0, 'distinct_ratio': 0, 'cross_turn': 0}
+ho-F4-1000 label=flood n=47 loop_start=1 raw_fired={'adjacent': (2, 'ADJACENT_IDENTICAL_RUN'), 'near_dup': (7, 'NEAR_DUPLICATE_ARGS'), 'cycle': (7, 'CYCLE')}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (1.0, 1, 8) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=False first=None suppressed={'near_dup': 40, 'cycle': 40, 'distinct_ratio': 0, 'cross_turn': 0}
+ho-F5-1000 label=flood n=104 loop_start=4 raw_fired={'near_dup': (28, 'NEAR_DUPLICATE_ARGS'), 'distinct_ratio': (95, 'LOW_DISTINCT_RATIO')}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (0.0, 10, 29) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=True first=28 suppressed={'near_dup': 0, 'cycle': 0, 'distinct_ratio': 0, 'cross_turn': 0}
+ho-F7-1000 label=flood n=126 loop_start=42 raw_fired={'exact_dup': (43, 'EXACT_DUP_WITHIN_GENERATION')}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (0.0, 42, 126) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=False first=None suppressed={'near_dup': 0, 'cycle': 0, 'distinct_ratio': 0, 'cross_turn': 0}
+ho-F7-1001 label=flood n=114 loop_start=38 raw_fired={'exact_dup': (39, 'EXACT_DUP_WITHIN_GENERATION'), 'distinct_ratio': (95, 'LOW_DISTINCT_RATIO')}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (0.0, 38, 114) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=True first=95 suppressed={'near_dup': 0, 'cycle': 0, 'distinct_ratio': 0, 'cross_turn': 0}
+ho-L1-1000 label=legitimate n=23 loop_start=None raw_fired={'adjacent': (2, 'ADJACENT_IDENTICAL_RUN'), 'near_dup': (7, 'NEAR_DUPLICATE_ARGS'), 'cycle': (7, 'CYCLE')}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (0.29, 1, 8) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=True first=7 suppressed={'near_dup': 0, 'cycle': 0, 'distinct_ratio': 0, 'cross_turn': 0}
+ho-L5-1001 label=legitimate n=30 loop_start=None raw_fired={'near_dup': (29, 'NEAR_DUPLICATE_ARGS')}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (0.41, 13, 30) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=True first=29 suppressed={'near_dup': 0, 'cycle': 0, 'distinct_ratio': 0, 'cross_turn': 0}
+ho-L6-1002 label=legitimate n=42 loop_start=None raw_fired={'near_dup': (21, 'NEAR_DUPLICATE_ARGS')}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (0.86, 12, 22) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=True first=21 suppressed={'near_dup': 0, 'cycle': 0, 'distinct_ratio': 0, 'cross_turn': 0}
+ho-L7-1000 label=legitimate n=23 loop_start=None raw_fired={'adjacent': (2, 'ADJACENT_IDENTICAL_RUN'), 'near_dup': (7, 'NEAR_DUPLICATE_ARGS'), 'cycle': (7, 'CYCLE')}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (1.0, 1, 8) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=False first=None suppressed={'near_dup': 16, 'cycle': 16, 'distinct_ratio': 0, 'cross_turn': 0}
+ho-L8-1000 label=legitimate n=97 loop_start=None raw_fired={}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (None, 97, 97) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=False first=None suppressed={'near_dup': 0, 'cycle': 0, 'distinct_ratio': 0, 'cross_turn': 0}
+ho-L11-1000 label=legitimate n=60 loop_start=None raw_fired={'near_dup': (42, 'NEAR_DUPLICATE_ARGS'), 'cycle': (17, 'CYCLE'), 'cross_turn': (17, 'CROSS_TURN_BATCH_REPEAT')}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (0.11, 6, 43) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=True first=17 suppressed={'near_dup': 0, 'cycle': 0, 'distinct_ratio': 0, 'cross_turn': 0}
+ho-L4-1000 label=legitimate n=30 loop_start=None raw_fired={'exact_dup': (7, 'EXACT_DUP_WITHIN_GENERATION'), 'cycle': (17, 'CYCLE')}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (1.0, 6, 18) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=False first=None suppressed={'near_dup': 0, 'cycle': 13, 'distinct_ratio': 0, 'cross_turn': 0}
+ho-hw-L-poll60 label=legitimate n=61 loop_start=None raw_fired={'adjacent': (2, 'ADJACENT_IDENTICAL_RUN'), 'near_dup': (7, 'NEAR_DUPLICATE_ARGS'), 'cycle': (7, 'CYCLE')}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (0.0, 1, 8) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=True first=7 suppressed={'near_dup': 0, 'cycle': 0, 'distinct_ratio': 0, 'cross_turn': 0}
+ho-hw-F-startdone3 label=flood n=60 loop_start=6 raw_fired={'exact_dup': (7, 'EXACT_DUP_WITHIN_GENERATION'), 'near_dup': (42, 'NEAR_DUPLICATE_ARGS'), 'cycle': (17, 'CYCLE')}
+    state score(mean per-repeated-signature (distinct results-1)/(occurrences-1)) up to first raw fire: (0.0, 6, 43) [score, distinct sigs, calls]; suppress threshold=0.5
+    state_aware: flag=True first=17 suppressed={'near_dup': 0, 'cycle': 0, 'distinct_ratio': 0, 'cross_turn': 0}

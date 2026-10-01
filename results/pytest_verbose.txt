@@ -1,0 +1,89 @@
+# HISTORICAL OUTPUT of Phase 1 (87 tests, earlier phase). Not the current suite; see README.md for the current count.
+tests/test_detectors.py::test_config_hash_stable_and_sensitive PASSED
+tests/test_detectors.py::test_exact_dup_positive_and_scope PASSED
+tests/test_detectors.py::test_exact_dup_negative PASSED
+tests/test_detectors.py::test_adjacent_positive_negative PASSED
+tests/test_detectors.py::test_near_dup_positive_ignores_volatile PASSED
+tests/test_detectors.py::test_near_dup_negative_distinct_paths_and_fanout PASSED
+tests/test_detectors.py::test_cycle_abc_and_negative PASSED
+tests/test_detectors.py::test_cycle_across_generations PASSED
+tests/test_detectors.py::test_cycle_rotating35_first_index PASSED
+tests/test_detectors.py::test_distinct_ratio_positive_negative PASSED
+tests/test_detectors.py::test_cross_turn_positive_negative PASSED
+tests/test_detectors.py::test_state_aware_suppresses_when_results_change PASSED
+tests/test_detectors.py::test_state_aware_cannot_suppress_without_hashes PASSED
+tests/test_detectors.py::test_every_flood_shape_caught_by_state_aware
+tests/test_detectors.py::test_every_flood_shape_caught_by_state_aware
+tests/test_detectors.py::test_every_flood_shape_caught_by_state_aware
+tests/test_detectors.py::test_every_flood_shape_caught_by_state_aware
+tests/test_detectors.py::test_every_flood_shape_caught_by_state_aware
+tests/test_detectors.py::test_every_flood_shape_caught_by_state_aware
+tests/test_detectors.py::test_every_flood_shape_caught_by_state_aware
+tests/test_detectors.py::test_every_flood_shape_caught_by_state_aware
+tests/test_detectors.py::test_baselines_miss_documented_shapes PASSED
+tests/test_detectors.py::test_state_aware_no_fp_on_legit_families
+tests/test_detectors.py::test_state_aware_no_fp_on_legit_families
+tests/test_detectors.py::test_state_aware_no_fp_on_legit_families
+tests/test_detectors.py::test_state_aware_no_fp_on_legit_families
+tests/test_detectors.py::test_state_aware_no_fp_on_legit_families
+tests/test_detectors.py::test_state_aware_no_fp_on_legit_families
+tests/test_detectors.py::test_state_aware_no_fp_on_legit_families
+tests/test_detectors.py::test_handwritten_hard_case_documented PASSED
+tests/test_detectors.py::test_result_is_structured PASSED
+tests/test_generators_trace.py::test_deterministic PASSED
+tests/test_generators_trace.py::test_rotating35_shape PASSED
+tests/test_generators_trace.py::test_start_done_and_2509_shapes PASSED
+tests/test_generators_trace.py::test_all_valid_and_labeled_and_split PASSED
+tests/test_generators_trace.py::test_legit_fanout_size PASSED
+tests/test_generators_trace.py::test_provenance_fields_and_jsonl_roundtrip PASSED
+tests/test_guard_freeze.py::test_guard_stops_flood_with_structured_reason PASSED
+tests/test_guard_freeze.py::test_guard_passes_legit_traffic PASSED
+tests/test_guard_freeze.py::test_guard_incremental_deltas PASSED
+tests/test_guard_freeze.py::test_guard_cancels_upstream_stream PASSED
+tests/test_guard_freeze.py::test_hard_stop_after_identical_cancelled_batches PASSED
+tests/test_guard_freeze.py::test_cross_turn_detector_also_stops_identical_retries PASSED
+tests/test_guard_freeze.py::test_history_rebuild_with_results PASSED
+tests/test_guard_freeze.py::test_guard_rejects_non_stream PASSED
+tests/test_guard_freeze.py::test_real_repo_is_not_frozen PASSED
+tests/test_guard_freeze.py::test_freeze_verify_and_tamper PASSED
+tests/test_guard_freeze.py::test_missing_frozen_file_refused PASSED
+tests/test_guard_freeze.py::test_draft_config_loads_and_matches_defaults PASSED
+tests/test_harness.py::test_normal_completion
+tests/test_harness.py::test_normal_completion
+tests/test_harness.py::test_normal_completion
+tests/test_harness.py::test_normal_completion
+tests/test_harness.py::test_normal_completion
+tests/test_harness.py::test_normal_completion
+tests/test_harness.py::test_normal_completion
+tests/test_harness.py::test_normal_completion
+tests/test_harness.py::test_normal_completion
+tests/test_harness.py::test_normal_completion
+tests/test_harness.py::test_normal_completion
+tests/test_harness.py::test_normal_completion
+tests/test_harness.py::test_reasoning_passback_needed_and_done PASSED
+tests/test_harness.py::test_history_primed_mode PASSED
+tests/test_harness.py::test_provenance_and_ledger PASSED
+tests/test_harness.py::test_call_cap PASSED
+tests/test_harness.py::test_max_turn_cap PASSED
+tests/test_harness.py::test_token_cap PASSED
+tests/test_harness.py::test_network_refused_and_budget_guard PASSED
+tests/test_harness.py::test_budget_guard_stops_run PASSED
+tests/test_harness.py::test_stop_early_hook_cancels_stream PASSED
+tests/test_harness.py::test_stop_hook_does_not_fire_on_legit_fanout PASSED
+tests/test_mock_upstream.py::test_flood_stream_both_delta_modes
+tests/test_mock_upstream.py::test_flood_stream_both_delta_modes
+tests/test_mock_upstream.py::test_whole_vs_incremental_chunk_counts PASSED
+tests/test_mock_upstream.py::test_determinism PASSED
+tests/test_mock_upstream.py::test_disconnect_recorded PASSED
+tests/test_mock_upstream.py::test_reasoning_passback_enforced PASSED
+tests/test_tools_scenarios.py::test_env_deterministic PASSED
+tests/test_tools_scenarios.py::test_stateful_polling_and_fix PASSED
+tests/test_tools_scenarios.py::test_ping_ignores_ts PASSED
+tests/test_tools_scenarios.py::test_oracle_completes
+tests/test_tools_scenarios.py::test_oracle_completes
+tests/test_tools_scenarios.py::test_oracle_completes
+tests/test_tools_scenarios.py::test_oracle_completes
+tests/test_tools_scenarios.py::test_oracle_completes
+tests/test_tools_scenarios.py::test_oracle_completes
+tests/test_tools_scenarios.py::test_modes_build PASSED
+============================= 87 passed in 11.96s ==============================

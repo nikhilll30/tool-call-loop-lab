@@ -1,0 +1,144 @@
+==============================================================================================================
+PATHOLOGICAL A: rotating-35 over 20 generations (evades exact-dup AND adjacent)
+==============================================================================================================
+run_id=flood-rot35-mg-100 label=flood shape=rotating35_multi_gen split=test synthetic=True
+note=SYNTHETIC: 35 rotating inputs spread over generations short enough that no generation contains an exact duplicate
+provenance={"detector_config": {"hash": null, "id": null}, "endpoint": "none", "guard_config": "off", "model": "synthetic-generator", "prompt_version": "n/a", "scenario": "synthetic", "seed": 100, "tool_schema_version": "n/a"}
+turns=20 generations=20 total_calls=400 distinct(name,args)=35
+generation sizes: [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20] ...
+first calls (gidx turn gen idx | name args | result_hash):
+     0 t0 g0 #0  | list_dir {"path":"list_dir_0_7528"} | 1a5bdb28f69f7ad2
+     1 t0 g0 #1  | get_doc {"id":"get_doc_1_2863"} | f57d5787b9889374
+     2 t0 g0 #2  | get_doc {"id":"get_doc_2_5730"} | 7aa90b0a90127af4
+     3 t0 g0 #3  | get_doc {"id":"get_doc_3_8304"} | 77306456334d5612
+     4 t0 g0 #4  | read_file {"path":"read_file_4_8731"} | 6daf82c7c7944463
+     5 t0 g0 #5  | read_file {"path":"read_file_5_1313"} | 9cca6200befc1c4a
+     6 t0 g0 #6  | get_doc {"id":"get_doc_6_4315"} | f2b16f0ae8dfc2d0
+     7 t0 g0 #7  | read_file {"path":"read_file_7_3350"} | 1a7692b387df6d5f
+     8 t0 g0 #8  | search {"query":"search_8_3763"} | bab02e765d1f71ef
+     9 t0 g0 #9  | search {"query":"search_9_3340"} | 0a58e6bae00eb498
+  ...
+   397 t19 g0 #17 | search {"query":"search_12_6712"} | 9a4f115ab1efaedc
+   398 t19 g0 #18 | list_dir {"path":"list_dir_13_6603"} | 5ac8b8a3b84f2083
+   399 t19 g0 #19 | get_doc {"id":"get_doc_14_9099"} | 0546d29277a6c1a5
+raw JSONL record (first turn, truncated to first 2 tool calls):
+{"cost_usd": 0.0, "label": "flood", "latency_s": 20.0, "notes": "SYNTHETIC: 35 rotating inputs spread over generations short enough that no generation contains an exact duplicate", "provenance": {"detector_config": {"hash": null, "id": null}, "endpoint": "none", "guard_config": "off", "model": "synthetic-generator", "prompt_version": "n/a", "scenario": "synthetic", "seed": 100, "tool_schema_version": "n/a"}, "run_id": "flood-rot35-mg-100", "schema_version": "floodlab.trace/1", "shape": "rotating35_multi_gen", "split": "test", "synthetic": true, "termination_reason": "synthetic", "turns": [{"generations": [{"cancelled": false, "content": "", "finish_reason": "tool_calls", "gen": 0, "reasoning_content": "", "t_end": 1700000000.9, "t_start": 1700000000.0, "tool_calls": [{"arguments": "{\"path\":\"list_dir_0_7528\"}", "index": 0, "name": "list_dir", "result_hash": "1a5bdb28f69f7ad2", "timestamp": 1700000000.0}, {"arguments": "{\"id\":\"get_doc_1_2863\"}", "index": 1, "name": "get_doc", "result_hash": "f57d5787b9889374", "timestamp": 1700000000.02}], "usage": {}}], "messages": [{"content": "", "n_tool_calls": 20, "role": "assistant"}], "turn": 0}]}
+
+detector        flag  first_idx  reason / evidence
+exact_dup       False      None  OK {"max_dups_in_a_generation": 0}
+adjacent        False      None  OK {"max_adjacent_run": 1}
+near_dup        False      None  OK {"suppressed_candidates": 0}
+cycle           True        104  CYCLE {"pattern": ["list_dir|{\"path\":\"list_dir_0_7528\"}", "get_doc|{\"id\":\"get_doc_1_2863\"}", "get_doc|{\"id\":\"get_doc_2_5730\"}", "get_doc|{\"id\":\"get_doc_3_8304\"}", "read_file|{\"path\":\"read_file_4_8731\"}", "read_file|{
+distinct_ratio  True         95  LOW_DISTINCT_RATIO {"distinct": 35, "norm_entropy": 0.776, "ratio": 0.365, "suppressed_before": 0, "window": 96}
+cross_turn      False      None  OK {"max_similarity": 0.143, "suppressed_candidates": 0}
+combined_raw    True         95  LOW_DISTINCT_RATIO {"earliest": "distinct_ratio", "fired": {"cycle": 104, "distinct_ratio": 95}}
+state_aware     True         95  LOW_DISTINCT_RATIO {"earliest": "distinct_ratio", "fired": {"cycle": 104, "distinct_ratio": 95}, "suppressed": {"cross_turn": 0, "cycle": 0, "distinct_ratio": 0, "near_dup": 0}}
+
+==============================================================================================================
+PATHOLOGICAL B: #2482 shape, ONE generation, 4120 calls, 35 rotating inputs
+==============================================================================================================
+run_id=flood-rot35-1g-100 label=flood shape=rotating35_one_gen split=test synthetic=True
+note=SYNTHETIC #2482 shape: one generation, 35 rotating distinct inputs, max adjacent-identical run 1
+provenance={"detector_config": {"hash": null, "id": null}, "endpoint": "none", "guard_config": "off", "model": "synthetic-generator", "prompt_version": "n/a", "scenario": "synthetic", "seed": 100, "tool_schema_version": "n/a"}
+turns=1 generations=1 total_calls=4120 distinct(name,args)=35
+generation sizes: [4120] 
+first calls (gidx turn gen idx | name args | result_hash):
+     0 t0 g0 #0  | list_dir {"path":"list_dir_0_7528"} | 1a5bdb28f69f7ad2
+     1 t0 g0 #1  | get_doc {"id":"get_doc_1_2863"} | f57d5787b9889374
+     2 t0 g0 #2  | get_doc {"id":"get_doc_2_5730"} | 7aa90b0a90127af4
+     3 t0 g0 #3  | get_doc {"id":"get_doc_3_8304"} | 77306456334d5612
+     4 t0 g0 #4  | read_file {"path":"read_file_4_8731"} | 6daf82c7c7944463
+     5 t0 g0 #5  | read_file {"path":"read_file_5_1313"} | 9cca6200befc1c4a
+     6 t0 g0 #6  | get_doc {"id":"get_doc_6_4315"} | f2b16f0ae8dfc2d0
+     7 t0 g0 #7  | read_file {"path":"read_file_7_3350"} | 1a7692b387df6d5f
+     8 t0 g0 #8  | search {"query":"search_8_3763"} | bab02e765d1f71ef
+     9 t0 g0 #9  | search {"query":"search_9_3340"} | 0a58e6bae00eb498
+  ...
+  4117 t0 g0 #4117| get_doc {"id":"get_doc_22_2074"} | 1c84b193695cb8d8
+  4118 t0 g0 #4118| read_file {"path":"read_file_23_9979"} | 483b31cfa4cfbb6e
+  4119 t0 g0 #4119| list_dir {"path":"list_dir_24_8308"} | c44752a284059d3c
+raw JSONL record (first turn, truncated to first 2 tool calls):
+{"cost_usd": 0.0, "label": "flood", "latency_s": 83.0, "notes": "SYNTHETIC #2482 shape: one generation, 35 rotating distinct inputs, max adjacent-identical run 1", "provenance": {"detector_config": {"hash": null, "id": null}, "endpoint": "none", "guard_config": "off", "model": "synthetic-generator", "prompt_version": "n/a", "scenario": "synthetic", "seed": 100, "tool_schema_version": "n/a"}, "run_id": "flood-rot35-1g-100", "schema_version": "floodlab.trace/1", "shape": "rotating35_one_gen", "split": "test", "synthetic": true, "termination_reason": "synthetic", "turns": [{"generations": [{"cancelled": false, "content": "", "finish_reason": "tool_calls", "gen": 0, "reasoning_content": "", "t_end": 1700000082.9, "t_start": 1700000000.0, "tool_calls": [{"arguments": "{\"path\":\"list_dir_0_7528\"}", "index": 0, "name": "list_dir", "result_hash": "1a5bdb28f69f7ad2", "timestamp": 1700000000.0}, {"arguments": "{\"id\":\"get_doc_1_2863\"}", "index": 1, "name": "get_doc", "result_hash": "f57d5787b9889374", "timestamp": 1700000000.02}], "usage": {}}], "messages": [{"content": "", "n_tool_calls": 4120, "role": "assistant"}], "turn": 0}]}
+
+detector        flag  first_idx  reason / evidence
+exact_dup       True         36  EXACT_DUP_WITHIN_GENERATION {"dups_at_fire": 2, "gen": 0, "generation_len": 4120, "turn": 0}
+adjacent        False      None  OK {"max_adjacent_run": 1}
+near_dup        False      None  OK {"suppressed_candidates": 0}
+cycle           True        104  CYCLE {"pattern": ["list_dir|{\"path\":\"list_dir_0_7528\"}", "get_doc|{\"id\":\"get_doc_1_2863\"}", "get_doc|{\"id\":\"get_doc_2_5730\"}", "get_doc|{\"id\":\"get_doc_3_8304\"}", "read_file|{\"path\":\"read_file_4_8731\"}", "read_file|{
+distinct_ratio  True         95  LOW_DISTINCT_RATIO {"distinct": 35, "norm_entropy": 0.776, "ratio": 0.365, "suppressed_before": 0, "window": 96}
+cross_turn      False      None  OK {"max_similarity": 0.0, "suppressed_candidates": 0}
+combined_raw    True         95  LOW_DISTINCT_RATIO {"earliest": "distinct_ratio", "fired": {"cycle": 104, "distinct_ratio": 95}}
+state_aware     True         95  LOW_DISTINCT_RATIO {"earliest": "distinct_ratio", "fired": {"cycle": 104, "distinct_ratio": 95}, "suppressed": {"cross_turn": 0, "cycle": 0, "distinct_ratio": 0, "near_dup": 0}}
+
+==============================================================================================================
+LEGITIMATE: polling with changing external state (one call per turn)
+==============================================================================================================
+run_id=legit-polling-100 label=legitimate shape=polling_state_changes split=test synthetic=True
+note=SYNTHETIC: identical poll each turn; external state (progress) changes
+provenance={"detector_config": {"hash": null, "id": null}, "endpoint": "none", "guard_config": "off", "model": "synthetic-generator", "prompt_version": "n/a", "scenario": "synthetic", "seed": 100, "tool_schema_version": "n/a"}
+turns=10 generations=10 total_calls=10 distinct(name,args)=1
+generation sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] 
+first calls (gidx turn gen idx | name args | result_hash):
+     0 t0 g0 #0  | get_job_status {"job":"build"} | 8f7a842d87172e65
+     1 t1 g0 #0  | get_job_status {"job":"build"} | 2eb07e45236d7d61
+     2 t2 g0 #0  | get_job_status {"job":"build"} | 38b1080ca2cb4494
+     3 t3 g0 #0  | get_job_status {"job":"build"} | 108277431fcdcbd4
+     4 t4 g0 #0  | get_job_status {"job":"build"} | a7b475a1da877632
+     5 t5 g0 #0  | get_job_status {"job":"build"} | 58768ca524aa7fdf
+     6 t6 g0 #0  | get_job_status {"job":"build"} | 9c5f6267b541ad91
+     7 t7 g0 #0  | get_job_status {"job":"build"} | 275046b3bc28b40e
+     8 t8 g0 #0  | get_job_status {"job":"build"} | a20ee5156184401c
+     9 t9 g0 #0  | get_job_status {"job":"build"} | 27927a8d408465ed
+  ...
+     7 t7 g0 #0  | get_job_status {"job":"build"} | 275046b3bc28b40e
+     8 t8 g0 #0  | get_job_status {"job":"build"} | a20ee5156184401c
+     9 t9 g0 #0  | get_job_status {"job":"build"} | 27927a8d408465ed
+raw JSONL record (first turn, truncated to first 2 tool calls):
+{"cost_usd": 0.0, "label": "legitimate", "latency_s": 6.2, "notes": "SYNTHETIC: identical poll each turn; external state (progress) changes", "provenance": {"detector_config": {"hash": null, "id": null}, "endpoint": "none", "guard_config": "off", "model": "synthetic-generator", "prompt_version": "n/a", "scenario": "synthetic", "seed": 100, "tool_schema_version": "n/a"}, "run_id": "legit-polling-100", "schema_version": "floodlab.trace/1", "shape": "polling_state_changes", "split": "test", "synthetic": true, "termination_reason": "synthetic", "turns": [{"generations": [{"cancelled": false, "content": "", "finish_reason": "tool_calls", "gen": 0, "reasoning_content": "", "t_end": 1700000000.52, "t_start": 1700000000.0, "tool_calls": [{"arguments": "{\"job\":\"build\"}", "index": 0, "name": "get_job_status", "result_hash": "8f7a842d87172e65", "timestamp": 1700000000.0}], "usage": {}}], "messages": [{"content": "", "n_tool_calls": 1, "role": "assistant"}], "turn": 0}]}
+
+detector        flag  first_idx  reason / evidence
+exact_dup       False      None  OK {"max_dups_in_a_generation": 0}
+adjacent        True          2  ADJACENT_IDENTICAL_RUN {"call": "get_job_status", "run": 3}
+near_dup        True          7  NEAR_DUPLICATE_ARGS {"max_dist": 0.1, "near_dups_in_window": 8, "suppressed_before": 0, "tool": "get_job_status", "window": 64}
+cycle           True          7  CYCLE {"pattern": ["get_job_status|{\"job\":\"build\"}"], "period": 1, "repeats": 8.0, "span_calls": 8, "start_index": 0, "suppressed_before": 0}
+distinct_ratio  False      None  OK {"note": "fewer calls than window"}
+cross_turn      False      None  OK {"max_similarity": 0.0, "suppressed_candidates": 0}
+combined_raw    True          7  NEAR_DUPLICATE_ARGS {"earliest": "near_dup", "fired": {"cycle": 7, "near_dup": 7}}
+state_aware     False      None  OK {"suppressed": {"cross_turn": 0, "cycle": 3, "distinct_ratio": 0, "near_dup": 3}}
+
+==============================================================================================================
+LEGITIMATE: paginate with changing cursor
+==============================================================================================================
+run_id=legit-pagination-100 label=legitimate shape=pagination_cursor split=test synthetic=True
+note=SYNTHETIC: one call per turn, changing cursor
+provenance={"detector_config": {"hash": null, "id": null}, "endpoint": "none", "guard_config": "off", "model": "synthetic-generator", "prompt_version": "n/a", "scenario": "synthetic", "seed": 100, "tool_schema_version": "n/a"}
+turns=28 generations=28 total_calls=28 distinct(name,args)=28
+generation sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+first calls (gidx turn gen idx | name args | result_hash):
+     0 t0 g0 #0  | list_items {"cursor":"0"} | af9600d5fb8d01a7
+     1 t1 g0 #0  | list_items {"cursor":"5"} | 630066d5b58a2bb2
+     2 t2 g0 #0  | list_items {"cursor":"10"} | 7b278520d129f768
+     3 t3 g0 #0  | list_items {"cursor":"15"} | b92258e13d45c956
+     4 t4 g0 #0  | list_items {"cursor":"20"} | c0391459529bea3b
+     5 t5 g0 #0  | list_items {"cursor":"25"} | 3eb27e9e3f958c36
+     6 t6 g0 #0  | list_items {"cursor":"30"} | a39323e24bb6ae6d
+     7 t7 g0 #0  | list_items {"cursor":"35"} | f66c3a4e40338c61
+     8 t8 g0 #0  | list_items {"cursor":"40"} | 4284053ffe305ef5
+     9 t9 g0 #0  | list_items {"cursor":"45"} | ea28d2b7559d2cad
+  ...
+    25 t25 g0 #0  | list_items {"cursor":"125"} | 159f37d88b50b311
+    26 t26 g0 #0  | list_items {"cursor":"130"} | ffd9fe2f6590ced2
+    27 t27 g0 #0  | list_items {"cursor":"135"} | e01f6119aafd14b3
+raw JSONL record (first turn, truncated to first 2 tool calls):
+{"cost_usd": 0.0, "label": "legitimate", "latency_s": 17.36, "notes": "SYNTHETIC: one call per turn, changing cursor", "provenance": {"detector_config": {"hash": null, "id": null}, "endpoint": "none", "guard_config": "off", "model": "synthetic-generator", "prompt_version": "n/a", "scenario": "synthetic", "seed": 100, "tool_schema_version": "n/a"}, "run_id": "legit-pagination-100", "schema_version": "floodlab.trace/1", "shape": "pagination_cursor", "split": "test", "synthetic": true, "termination_reason": "synthetic", "turns": [{"generations": [{"cancelled": false, "content": "", "finish_reason": "tool_calls", "gen": 0, "reasoning_content": "", "t_end": 1700000000.52, "t_start": 1700000000.0, "tool_calls": [{"arguments": "{\"cursor\":\"0\"}", "index": 0, "name": "list_items", "result_hash": "af9600d5fb8d01a7", "timestamp": 1700000000.0}], "usage": {}}], "messages": [{"content": "", "n_tool_calls": 1, "role": "assistant"}], "turn": 0}]}
+
+detector        flag  first_idx  reason / evidence
+exact_dup       False      None  OK {"max_dups_in_a_generation": 0}
+adjacent        False      None  OK {"max_adjacent_run": 1}
+near_dup        False      None  OK {"suppressed_candidates": 0}
+cycle           False      None  OK {"suppressed_candidates": 0}
+distinct_ratio  False      None  OK {"note": "fewer calls than window"}
+cross_turn      False      None  OK {"max_similarity": 0.0, "suppressed_candidates": 0}
+combined_raw    False      None  OK {}
+state_aware     False      None  OK {"suppressed": {"cross_turn": 0, "cycle": 0, "distinct_ratio": 0, "near_dup": 0}}
+

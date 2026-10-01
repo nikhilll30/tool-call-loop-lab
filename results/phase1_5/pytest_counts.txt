@@ -1,0 +1,10 @@
+# HISTORICAL per-file test counts of Phase 1.5 (earlier phase). Not the current suite; see README.md for the current count.
+     31 tests/test_detectors.py
+      6 tests/test_generators_trace.py
+     13 tests/test_guard_freeze.py
+     22 tests/test_harness.py
+      7 tests/test_heldout_isolation.py
+      6 tests/test_mock_upstream.py
+      2 tests/test_phase1_5_reproduce.py
+      5 tests/test_policies_stats.py
+     10 tests/test_tools_scenarios.py

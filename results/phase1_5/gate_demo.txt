@@ -1,0 +1,9 @@
+REFUSING to run online A/B: no /tmp/tmp6wdhjhe5/frozen/MANIFEST.json: config is NOT frozen; refusing to run online A/B
+REFUSING to run online A/B: frozen file CHANGED since freeze: detector_guard.frozen.yaml
+REFUSING to run online A/B: no <repo>/configs/frozen/MANIFEST.json: config is NOT frozen; refusing to run online A/B
+1. before freeze  -> 2 (2 = refuse)
+2. manifest: {"status": "frozen", "config_id": "guard-S0", "config_hash": "1fcb0ddcae52", "files": {"detector_guard.frozen.yaml": "1b08faa5a422ab2f44a997472e84fd7690143e1b08961ab3396c2512823cc4f2", "frozen_fp_threshold.frozen.json": "9e6a6a73df83062a094dca96c3062fed8f91f87867362ae981e5e5ed12dd5e85"}}
+frozen config guard-S0 (1fcb0ddcae52) verified; A/B runner is a Phase 4 deliverable and is not implemented.
+3. after freeze   -> 3 (3 = verified; A/B itself not implemented)
+4. after tampering with the frozen file -> 2 (2 = refuse)
+5. REAL repo gate  -> 2 (2 = refuse: repo config is NOT frozen)

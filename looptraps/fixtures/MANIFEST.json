@@ -1,0 +1,83 @@
+{
+ "notes": {
+  "what": "Minimized replay fixtures derived from stored private exploratory traces (split exploratory-2A).",
+  "fixture_file_sha256": "sha256 of the shipped fixture file; publicly verifiable (checked by tests/test_looptraps.py).",
+  "source_line_sha256": "sha256 of the private source trace line the fixture was derived from. PROVENANCE ANCHOR against the maintainer's private canonical record; NOT publicly verifiable because the source traces are not published.",
+  "derived_from_canonical_commit": "commit of the private canonical repository the fixtures were derived from; NOT publicly verifiable (private repository)."
+ },
+ "derived_from_canonical_commit": "a406342aedc5026dc8170c123dff888f90f1a053",
+ "entries": [
+  {
+   "run_id": "p2a-smoke-M2_rotating_batch-M2_rotating_batch-7001",
+   "fixture": "mimo_xiaomi_pilot.jsonl",
+   "source_line_sha256": "684d5e6b8019e7a041ca24b6382ea2926ea7a88062731b8974b4cf86ce6eaf21",
+   "fixture_file_sha256": "8cd773e905b1bd9c68e2333bf0751e8e241183df2f66884c24b44e9d8d4811e9"
+  },
+  {
+   "run_id": "p2a-pilot-M1_fanout_cancel_resend-M1_fanout_cancel_resend-7101",
+   "fixture": "mimo_xiaomi_pilot.jsonl",
+   "source_line_sha256": "65c9ee76f9696a0e94bbc0baf7ad2c1f76fc49acbcb256334594962577781873",
+   "fixture_file_sha256": "8cd773e905b1bd9c68e2333bf0751e8e241183df2f66884c24b44e9d8d4811e9"
+  },
+  {
+   "run_id": "p2a-pilot-M2_rotating_batch-M2_rotating_batch-7102",
+   "fixture": "mimo_xiaomi_pilot.jsonl",
+   "source_line_sha256": "ec3be40be8005dd5481ad28591e3b6066484bc338ea0b3f3a6fe69fa856a5875",
+   "fixture_file_sha256": "8cd773e905b1bd9c68e2333bf0751e8e241183df2f66884c24b44e9d8d4811e9"
+  },
+  {
+   "run_id": "p2a-pilot-M3_start_done_alternation-M3_start_done_alternation-7103",
+   "fixture": "mimo_xiaomi_pilot.jsonl",
+   "source_line_sha256": "db830d60e304c59781617e5eede235510b1521f9b803699741bd29df0cdd2e27",
+   "fixture_file_sha256": "8cd773e905b1bd9c68e2333bf0751e8e241183df2f66884c24b44e9d8d4811e9"
+  },
+  {
+   "run_id": "p2a-pilot-F1a_cancel_retry_explain-F1a_cancel_retry_explain-7104",
+   "fixture": "mimo_xiaomi_pilot.jsonl",
+   "source_line_sha256": "c547730d77f5b21a64bdcb836e39e59870268f4aedbcfc94cb20f6bfe9fa929f",
+   "fixture_file_sha256": "8cd773e905b1bd9c68e2333bf0751e8e241183df2f66884c24b44e9d8d4811e9"
+  },
+  {
+   "run_id": "p2a-pilot-F7_crossturn_history_primed-F7_crossturn_history_primed-7105",
+   "fixture": "mimo_xiaomi_pilot.jsonl",
+   "source_line_sha256": "2cdc63f14837e9b39c31a63a18540f435cc832f002887a75fa3664840d91cafe",
+   "fixture_file_sha256": "8cd773e905b1bd9c68e2333bf0751e8e241183df2f66884c24b44e9d8d4811e9"
+  },
+  {
+   "run_id": "p2a-pilot-M2_rotating_batch-M2_rotating_batch-7106",
+   "fixture": "mimo_xiaomi_pilot.jsonl",
+   "source_line_sha256": "89e51aaf456d7bed15a35514825a6e7b8d2523e0296403b2d96c29668cc2be1d",
+   "fixture_file_sha256": "8cd773e905b1bd9c68e2333bf0751e8e241183df2f66884c24b44e9d8d4811e9"
+  },
+  {
+   "run_id": "p2a-pilot-M2_rotating_batch-M2_rotating_batch-7107",
+   "fixture": "mimo_xiaomi_pilot.jsonl",
+   "source_line_sha256": "620672550971bb8fed76f2cd724a1534ca6cbfeb5baf18b5af9b8edfc8c6ceb2",
+   "fixture_file_sha256": "8cd773e905b1bd9c68e2333bf0751e8e241183df2f66884c24b44e9d8d4811e9"
+  },
+  {
+   "run_id": "p2a-pilot-M2_rotating_batch-M2_rotating_batch-7108",
+   "fixture": "mimo_xiaomi_pilot.jsonl",
+   "source_line_sha256": "bd2ad103c3366ae04ae5781c85a055be1fce493223ba1e010eef8ac98a80a108",
+   "fixture_file_sha256": "8cd773e905b1bd9c68e2333bf0751e8e241183df2f66884c24b44e9d8d4811e9"
+  },
+  {
+   "run_id": "p2a-f3fu-F3_pagination_backtrack-F3_pagination_backtrack-6001",
+   "fixture": "gptoss_f3_followup.jsonl",
+   "source_line_sha256": "527994a49366a9a6c0c284ea1f68dd5abdf4d710c7f0946a22d5c181cb3d1ac8",
+   "fixture_file_sha256": "f616ba7130f338a9398f99285ac0f4924699a4c449c87afe142f30bfb858ee9a"
+  },
+  {
+   "run_id": "p2a-f3fu-F3_pagination_backtrack-F3_pagination_backtrack-6004",
+   "fixture": "gptoss_f3_followup.jsonl",
+   "source_line_sha256": "4578401f3933630906bd15d336b946a2403020b6c51eb28c421c3cbc6882fe92",
+   "fixture_file_sha256": "f616ba7130f338a9398f99285ac0f4924699a4c449c87afe142f30bfb858ee9a"
+  },
+  {
+   "run_id": "p2a-pilot-F3_pagination_backtrack-F3_pagination_backtrack-5012",
+   "fixture": "gptoss_darkbloom_pilot.jsonl",
+   "source_line_sha256": "bbc5c96c57560cf111c23461e566f9b84c7c551810fdfaa3e8c0eb48ec2178d1",
+   "fixture_file_sha256": "b95436251559648c9d6e45886ff8a70b4c853d5424ba3a389004915495a9fe49"
+  }
+ ]
+}

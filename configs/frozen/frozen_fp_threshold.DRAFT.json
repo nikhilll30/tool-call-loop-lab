@@ -1,0 +1,6 @@
+{
+ "status": "DRAFT",
+ "max_fp_rate": 0.05,
+ "suite": "legit-suite-v1",
+ "note": "DRAFT pre-registered threshold: guard may flag at most this fraction of the legitimate suite. Must be fixed before the online A/B."
+}

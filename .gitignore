@@ -1,0 +1,51 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/traces/
+results/tmp/
+
+# --- added at pre-push release check (patterns only; nothing tracked was affected) ---
+# secrets / credentials
+.env
+.env.*
+*.env
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+.netrc
+credentials*
+secrets*
+*.secret
+# python caches / tooling
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+# virtualenvs
+venv/
+env/
+.venv/
+# editor / OS junk
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# public tree: regenerated, not shipped
+data/heldout/
+data/traces/
+results/tmp/
