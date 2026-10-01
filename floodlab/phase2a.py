@@ -88,7 +88,7 @@ class Upstream:
         if self._key:
             h["Authorization"] = "Bearer " + self._key          # in-memory only; never stored or printed
         if self.live and extra:
-            h["X-Title"] = "tool-call-flood-lab phase2a"
+            h["X-Title"] = "tool-call-loop-lab phase2a"
         return h
 
 
